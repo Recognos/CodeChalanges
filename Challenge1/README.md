@@ -1,4 +1,4 @@
-# Challange 1
+# Challange - Design & Implement stable sort method
 
 Given the data structures defined in the DataStructures.cs (and considering there may be more data structuresd implementing BoxPositioned),
 design and implement the StableSort method so that it meets the following criteria.
