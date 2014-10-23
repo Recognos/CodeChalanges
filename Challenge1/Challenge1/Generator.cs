@@ -9,14 +9,14 @@ namespace Challenge1
 
         public static Token[] GenerateTokens(int maxCount = 100)
         {
-            return Enumerable.Range(1, rnd.Next(maxCount))
+            return Enumerable.Range(1, rnd.Next(1, maxCount))
                 .Select(i => new Token((char)('a' + rnd.Next(0, 25)), RandomBox()))
                 .ToArray();
         }
 
         public static Word[] GenerateWords(int maxCount = 100)
         {
-            return Enumerable.Range(1, rnd.Next(maxCount))
+            return Enumerable.Range(1, rnd.Next(1, maxCount))
                 .Select(i => new Word(Generator.GenerateTokens(10)))
                 .ToArray();
         }
