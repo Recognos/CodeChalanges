@@ -21,4 +21,4 @@ static void Main(string[] args)
 (equivalent of tokens.OrderByDescending(t => t.Box.Top).ThenBy(t => t.Box.Left) )
 2. a stable sorting algorithm must be used (Stable sorting algorithms maintain the relative order of records with equal keys)
 2. arrays must be sorted in-place by swapping elements and no copies should be made
-3. method is called many times so it must be as efficient as possible
+3. method is called many times so it must be as efficient as possible <- this is very important
