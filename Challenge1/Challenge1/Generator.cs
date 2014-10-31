@@ -7,16 +7,16 @@ namespace Challenge1
     {
         private static readonly Random rnd = new Random();
 
-        public static Token[] GenerateTokens(int maxCount = 100)
+        public static Token[] GenerateTokens(int count = 100)
         {
-            return Enumerable.Range(1, rnd.Next(1, maxCount))
+            return Enumerable.Range(1, count)
                 .Select(i => new Token((char)('a' + rnd.Next(0, 25)), RandomBox()))
                 .ToArray();
         }
 
-        public static Word[] GenerateWords(int maxCount = 100)
+        public static Word[] GenerateWords(int count = 100)
         {
-            return Enumerable.Range(1, rnd.Next(1, maxCount))
+            return Enumerable.Range(1, count)
                 .Select(i => new Word(Generator.GenerateTokens(10)))
                 .ToArray();
         }
