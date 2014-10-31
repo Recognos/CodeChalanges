@@ -1,4 +1,4 @@
-CodeChalanges
+CodeChalenges
 =============
 
-Various internal code chalanges
+Various internal code challenges
