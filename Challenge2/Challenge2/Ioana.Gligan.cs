@@ -12,7 +12,7 @@ namespace Challenge2
         static int currentlyActiveOperations = 0;
         static int startedOperations = 0;
 
-        public static void IoanaMain(string[] args)
+        public static void RunMain(string[] args)
         {
             for (int i = 0; i < TotalNumberOfExecutions / MaxConcurrency + 1; i++)
             {
