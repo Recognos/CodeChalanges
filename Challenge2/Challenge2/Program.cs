@@ -47,7 +47,7 @@ namespace Challenge2
         {
             Interlocked.Increment(ref currentlyActiveOperations);
 
-            if (currentlyActiveOperations > 5)
+            if (currentlyActiveOperations > MaxConcurrency)
             {
                 throw new InvalidOperationException("Too much concurrency");
             }
