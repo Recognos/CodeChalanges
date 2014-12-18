@@ -13,7 +13,7 @@ namespace Challenge2
     /// Modify the code below so that the concurrency level at which RealOperation() is executed never exceeds the value of MaxConcurrency.
     /// - RealOperation() must be executed TotalNumberOfExecutions times.
     /// - RealOperation() the max number of concurrent calls to RealOperation() must be MaxConcurrency
-    /// </summary>
+    /// </summary>  
     class Program
     {
         const int MaxConcurrency = 5;
@@ -26,9 +26,12 @@ namespace Challenge2
         {
             //IoanaGligan.RunMain(args);
             //IoanaGliganFinal.RunMain(args);
+            //BogdanGaliceanu.RunMain();
+            //PaulParau1.RunMain();
+            PaulParauFinal.RunMain();
 
             //Solution.RunMain(args);
-            RunMain();
+            //RunMain();
         }
 
         private static void RunMain()
