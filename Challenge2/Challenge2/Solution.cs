@@ -14,7 +14,7 @@ namespace Challenge2
 
         static SemaphoreSlim semaphore = new SemaphoreSlim(MaxConcurrency);
 
-        private static void RunMain()
+        public static void RunMain(string[] args)
         {
             Task[] tasks = new Task[TotalNumberOfExecutions];
 
