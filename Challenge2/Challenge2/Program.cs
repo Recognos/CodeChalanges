@@ -24,17 +24,19 @@ namespace Challenge2
 
         static void Main(string[] args)
         {
-            Task[] tasks = new Task[TotalNumberOfExecutions];
+            IoanaGligan.IoanaMain(args);
 
-            for (int i = 0; i < TotalNumberOfExecutions; i++)
-            {
-                tasks[i] = Task.Factory.StartNew(() => LongRunningCpuIntensiveOperationAsync()).Unwrap();
-            }
+            //Task[] tasks = new Task[TotalNumberOfExecutions];
 
-            Task.WhenAll(tasks).Wait();
+            //for (int i = 0; i < TotalNumberOfExecutions; i++)
+            //{
+            //    tasks[i] = Task.Factory.StartNew(() => LongRunningCpuIntensiveOperationAsync()).Unwrap();
+            //}
 
-            Console.WriteLine("done");
-            Console.ReadKey();
+            //Task.WhenAll(tasks).Wait();
+
+            //Console.WriteLine("done");
+            //Console.ReadKey();
         }
 
         private static async Task LongRunningCpuIntensiveOperationAsync()
