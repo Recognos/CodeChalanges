@@ -25,9 +25,10 @@ namespace Challenge2
         static void Main(string[] args)
         {
             //IoanaGligan.RunMain(args);
-            IoanaGliganFinal.RunMain(args);
+            //IoanaGliganFinal.RunMain(args);
 
-            //RunMain();
+            //Solution.RunMain(args);
+            RunMain();
         }
 
         private static void RunMain()
