@@ -22,7 +22,8 @@ namespace CodeChallange3
         {
             string[] uris = GetUris();
 
-            var result = DownloadFilesEfficiently(uris, FirstResultsCutoff);
+            var result = DownloadFilesEfficiently(uris, FirstResultsCutoff)
+                .Result;
 
             foreach (var line in result)
             {
@@ -33,13 +34,11 @@ namespace CodeChallange3
             Console.ReadKey();
         }
 
-        private static string[] DownloadFilesEfficiently(string[] uris, int maxNumberOfFilesToDlwnload)
+        private static async Task<string[]> DownloadFilesEfficiently(string[] uris, int maxNumberOfFilesToDlwnload)
         {
             // modify this to return after the first maxNumberOfFilesToDlwnload calls to DownloadFile complete
-
             var tasks = uris.Select(u => Task.Factory.StartNew(() => DownloadFile(u)).Unwrap());
-            var result = Task.WhenAll(tasks).Result;
-            return result;
+            return await Task.WhenAll(tasks);
         }
 
         private static string[] GetUris()
